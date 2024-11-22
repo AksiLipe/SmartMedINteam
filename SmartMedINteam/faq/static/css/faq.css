@@ -1,0 +1,14 @@
+body {
+    background-color: #258686;
+}
+
+.main {
+    display: flex;
+
+}
+
+div {
+    align-items: center;
+    border: #e35f5f;
+    height: 300px;
+}
