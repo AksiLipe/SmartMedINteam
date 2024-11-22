@@ -1,5 +1,5 @@
 from django.shortcuts import render
 
 
-def faq(request):
+def table(request):
     return render(request, "table.html")

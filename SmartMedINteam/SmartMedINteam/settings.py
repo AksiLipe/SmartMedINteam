@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     'authorization',
     'SmartMedINteam',
     'faq',
+    "table",
 ]
 
 MIDDLEWARE = [
