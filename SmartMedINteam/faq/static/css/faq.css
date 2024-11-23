@@ -1,14 +1,303 @@
 body {
-    background-color: #258686;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: url("../../static/img/fon.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center top;
+}
+
+.sidebar {
+    background: rgba(66, 165, 245, 0.2);
+    color: #fff;
+    width: 15%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 60vh;
+    position: fixed;
+    left: 20px;
+    top: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    justify-content: space-between;
+    max-height: 800px;
+}
+
+.sidebar-links {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.nav-btn {
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 10px 15px;
+    margin-top: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+    text-align: center;
+    width: 80%;
+}
+
+.nav-btn:hover {
+    background-color: #1e88e5;
+    color: white;
+}
+
+.sidebar-user {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.doctor-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border: 2px solid #fff;
+}
+
+.doctor-username {
+    color: #F5F5F5;
+    font-weight: bold;
+    text-align: center;
 }
 
 .main {
     display: flex;
-
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 220px;
+    padding: 20px 0 0 0;
+    width: calc(100% - 220px);
+    flex: 1;
 }
 
-div {
+.content {
+    flex: 1;
+    max-width: 800px;
+    margin-right: 230px;
+    padding: 20px;
+    background: linear-gradient(to bottom, #ffffff, #e3f2fd);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-height: 90vh;
+    overflow-y: auto; /* Добавьте прокрутку для контента */
+}
+
+h1 {
+    color: #42a5f5;
+}
+
+.faq-section {
+    height: 800px; /* Установите фиксированную высоту для контейнера FAQ */
+    overflow-y: auto; /* Добавьте вертикальную прокрутку */
+    overflow-x: hidden; /* Скрыть горизонтальную прокрутку, если она не нужна */
+    margin-top: 20px;
+    padding-right: 10px; /* Добавьте отступ для прокрутки */
+}
+
+.faq-item {
+    background-color: #e3f2fd;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.faq-item:hover {
+    background-color: #bbdefb;
+}
+
+.topic {
+    font-weight: bold;
+    color: #42a5f5;
+    margin-bottom: 5px;
+}
+
+.question {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.faq-footer {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    border: #e35f5f;
-    height: 300px;
+    margin-top: 10px;
+}
+
+.answer-btn {
+    background-color: #42a5f5;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.answer-btn:hover {
+    background-color: #1e88e5;
+}
+
+.answer {
+    display: none;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #e3ffd5;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+    background: linear-gradient(to bottom, #ffffff, #e3f2fd);
+    margin: 10% auto;
+    padding: 20px;
+    border: none;
+    width: 60%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.close {
+    color: #333;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+}
+
+.modal-content h2 {
+    color: #42a5f5;
+    margin-bottom: 20px;
+}
+
+.modal-content textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.modal-content button[type="submit"] {
+    background-color: #42a5f5;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.modal-content button[type="submit"]:hover {
+    background-color: #1e88e5;
+}
+
+.footer {
+    background: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 80%;
+    margin-top: 100px;
+    margin-left: 150px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: auto;
+}
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+}
+
+.timestamp {
+    font-size: 0.9em;
+    color: #888;
+}
+
+.edit-icon {
+    cursor: pointer;
+    color: #42a5f5;
+    margin-left: 10px;
+}
+
+.edit-icon:hover {
+    color: #1e88e5;
+}
+
+.sort-buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.sort-btn {
+    background-color: #42a5f5;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    font-weight: bold;
+}
+
+.sort-btn:hover {
+    background-color: #1e88e5;
+}
+
+.logout-btn {
+    margin-top: auto;
+    margin-bottom: 40px;
 }

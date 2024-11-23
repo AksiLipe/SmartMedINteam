@@ -3,14 +3,446 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../static/css/table.css">
-    <title>TABLE</title>
+    <link rel="icon" href="../static/img/logo-inteam.jpg" type="image/png">
+    <title>Таблица пациентов</title>
 </head>
-<body>
-    <div class="main">
-        <div>
-            TABLE
+<body class="fade-in">
+<div class="sidebar fade-in">
+    <div class="sidebar-user">
+        <img src="../static/img/doctor-2.png" alt="Аватар врача" class="doctor-avatar">
+        <span class="doctor-username">{{ doctor_username }}</span>
+    </div>
+    <div class="sidebar-links">
+        <a href="{% url 'table' %}" class="nav-btn">Таблица</a>
+        <a href="{% url 'faq' %}" class="nav-btn">FAQ</a>
+    </div>
+    <a href="{% url 'login' %}" class="nav-btn logout-btn">Выйти</a>
+</div>
+
+<div class="main fade-in">
+    <div class="content">
+        <h1 class="mb-4">Список пациентов</h1>
+
+        <!-- Кнопка для регистрации нового пациента -->
+        <button type="button" class="btn" id="registerBtn">Зарегистрировать пациента</button>
+
+        <!-- Таблица пациентов -->
+        <div class="table-container">
+            <table id="patientTable">
+                <thead>
+                <tr>
+                    <th>Фото</th>
+                    <th>ID</th>
+                    <th>ФИО</th>
+                    <th>Возраст</th>
+                    <th>Пол</th>
+                    <th>Действия</th>
+                </tr>
+                </thead>
+                <tbody id="patientTableBody">
+                <tr>
+                    <td><img src="../static/images/default-avatar.png" alt="Фото пациента" class="patient-photo"></td>
+                    <td>1</td>
+                    <td>Иванов Иван Иванович</td>
+                    <td>30</td>
+                    <td>Мужской</td>
+                    <td>
+                        <button class="editBtn">Редактировать</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="../static/images/default-avatar.png" alt="Фото пациента" class="patient-photo"></td>
+                    <td>1</td>
+                    <td>Иванов Иван Иванович</td>
+                    <td>30</td>
+                    <td>Мужской</td>
+                    <td>
+                        <button class="editBtn">Редактировать</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="../static/images/default-avatar.png" alt="Фото пациента" class="patient-photo"></td>
+                    <td>1</td>
+                    <td>Иванов Иван Иванович</td>
+                    <td>30</td>
+                    <td>Мужской</td>
+                    <td>
+                        <button class="editBtn">Редактировать</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="../static/images/default-avatar.png" alt="Фото пациента" class="patient-photo"></td>
+                    <td>1</td>
+                    <td>Иванов Иван Иванович</td>
+                    <td>30</td>
+                    <td>Мужской</td>
+                    <td>
+                        <button class="editBtn">Редактировать</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="../static/images/default-avatar.png" alt="Фото пациента" class="patient-photo"></td>
+                    <td>1</td>
+                    <td>Иванов Иван Иванович</td>
+                    <td>30</td>
+                    <td>Мужской</td>
+                    <td>
+                        <button class="editBtn">Редактировать</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="../static/images/default-avatar.png" alt="Фото пациента" class="patient-photo"></td>
+                    <td>1</td>
+                    <td>Иванов Иван Иванович</td>
+                    <td>30</td>
+                    <td>Мужской</td>
+                    <td>
+                        <button class="editBtn">Редактировать</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="../static/images/default-avatar.png" alt="Фото пациента" class="patient-photo"></td>
+                    <td>1</td>
+                    <td>Иванов Иван Иванович</td>
+                    <td>30</td>
+                    <td>Мужской</td>
+                    <td>
+                        <button class="editBtn">Редактировать</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="../static/images/default-avatar.png" alt="Фото пациента" class="patient-photo"></td>
+                    <td>1</td>
+                    <td>Иванов Иван Иванович</td>
+                    <td>30</td>
+                    <td>Мужской</td>
+                    <td>
+                        <button class="editBtn">Редактировать</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="../static/images/default-avatar.png" alt="Фото пациента" class="patient-photo"></td>
+                    <td>1</td>
+                    <td>Иванов Иван Иванович</td>
+                    <td>30</td>
+                    <td>Мужской</td>
+                    <td>
+                        <button class="editBtn">Редактировать</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="../static/images/default-avatar.png" alt="Фото пациента" class="patient-photo"></td>
+                    <td>1</td>
+                    <td>Иванов Иван Иванович</td>
+                    <td>30</td>
+                    <td>Мужской</td>
+                    <td>
+                        <button class="editBtn">Редактировать</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="../static/images/default-avatar.png" alt="Фото пациента" class="patient-photo"></td>
+                    <td>1</td>
+                    <td>Иванов Иван Иванович</td>
+                    <td>30</td>
+                    <td>Мужской</td>
+                    <td>
+                        <button class="editBtn">Редактировать</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="../static/images/default-avatar.png" alt="Фото пациента" class="patient-photo"></td>
+                    <td>1</td>
+                    <td>Иванов Иван Иванович</td>
+                    <td>30</td>
+                    <td>Мужской</td>
+                    <td>
+                        <button class="editBtn">Редактировать</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="../static/images/default-avatar.png" alt="Фото пациента" class="patient-photo"></td>
+                    <td>1</td>
+                    <td>Иванов Иван Иванович</td>
+                    <td>30</td>
+                    <td>Мужской</td>
+                    <td>
+                        <button class="editBtn">Редактировать</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="../static/images/default-avatar.png" alt="Фото пациента" class="patient-photo"></td>
+                    <td>1</td>
+                    <td>Иванов Иван Иванович</td>
+                    <td>30</td>
+                    <td>Мужской</td>
+                    <td>
+                        <button class="editBtn">Редактировать</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="../static/images/default-avatar.png" alt="Фото пациента" class="patient-photo"></td>
+                    <td>1</td>
+                    <td>Иванов Иван Иванович</td>
+                    <td>30</td>
+                    <td>Мужской</td>
+                    <td>
+                        <button class="editBtn">Редактировать</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="../static/images/default-avatar.png" alt="Фото пациента" class="patient-photo"></td>
+                    <td>1</td>
+                    <td>Иванов Иван Иванович</td>
+                    <td>30</td>
+                    <td>Мужской</td>
+                    <td>
+                        <button class="editBtn">Редактировать</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="../static/images/default-avatar.png" alt="Фото пациента" class="patient-photo"></td>
+                    <td>1</td>
+                    <td>Иванов Иван Иванович</td>
+                    <td>30</td>
+                    <td>Мужской</td>
+                    <td>
+                        <button class="editBtn">Редактировать</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="../static/images/default-avatar.png" alt="Фото пациента" class="patient-photo"></td>
+                    <td>1</td>
+                    <td>Иванов Иван Иванович</td>
+                    <td>30</td>
+                    <td>Мужской</td>
+                    <td>
+                        <button class="editBtn">Редактировать</button>
+                    </td>
+                </tr>
+                <!-- Добавьте дополнительные строки по мере необходимости -->
+                </tbody>
+            </table>
         </div>
     </div>
+
+    <div class="right-filters">
+        <div class="filters">
+            <h3>Фильтры</h3>
+            <div class="filter-group">
+                <label for="ageFrom">Возраст от:</label>
+                <input type="number" id="ageFrom" min="0">
+                <label for="ageTo">до:</label>
+                <input type="number" id="ageTo" min="0">
+                <button type="button" class="btn" id="filterAgeBtn">Фильтровать</button>
+            </div>
+
+            <div class="filter-group sort-buttons">
+                <button type="button" class="btn" id="sortAlphaBtn">Сортировать по алфавиту</button>
+                <button type="button" class="btn" id="sortNewestBtn">Сортировать по новизне</button>
+            </div>
+
+            <div class="filter-group">
+                <input type="text" id="searchSurname" placeholder="Поиск по фамилии">
+                <button type="button" class="btn" id="searchBtn">Поиск</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Модальное окно для регистрации и редактирования пациента -->
+<div id="registerModal" class="modal fade-in">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Регистрация/Редактирование пациента</h2>
+        <form id="registerForm">
+
+            <label for="patientPhoto">Фото пациента:</label>
+            <input type="file" id="patientPhoto" accept="image/*">
+
+            <label for="patientName">ФИО пациента:</label>
+            <input type="text" id="patientName" required>
+
+            <label for="patientAge">Возраст:</label>
+            <input type="number" id="patientAge" required>
+
+            <label for="patientGender">Пол:</label>
+            <select id="patientGender" required>
+                <option value="">Выберите пол</option>
+                <option value="Мужской">Мужской</option>
+                <option value="Женский">Женский</option>
+            </select>
+
+            <label for="patientPulse">Пульс:</label>
+            <input type="number" id="patientPulse" required>
+
+            <label for="patientBloodPressure">Артериальное давление:</label>
+            <input type="text" id="patientBloodPressure" placeholder="120/80" required>
+
+            <label for="patientSaturation">Сатурация:</label>
+            <input type="number" id="patientSaturation" required>
+
+            <label for="patientRespiratoryRate">Частота дыхания:</label>
+            <input type="number" id="patientRespiratoryRate" required>
+
+            <label for="patientECG">ЭКГ:</label>
+            <textarea id="patientECG" rows="3" placeholder="Описание ЭКГ" required></textarea>
+
+            <label for="patientPhone">Номер телефона:</label>
+            <input type="text" id="patientPhone" required>
+
+            <label for="patientLogin">Логин:</label>
+            <input type="text" id="patientLogin" required>
+
+            <label for="patientPassword">Пароль:</label>
+            <input type="password" id="patientPassword" required>
+
+            <button type="submit" class="btn-submit">Сохранить</button>
+        </form>
+    </div>
+</div>
+
+<!-- Футер с фактами о здоровье -->
+<footer class="footer fade-in">
+    <div class="footer-content">
+        <p id="healthFact">Здоровье — это не всё, но всё без здоровья — ничто.</p>
+    </div>
+</footer>
+
+<script src="../static/JS/table.js"></script>
+<script>
+    // Пример массива фактов о здоровье
+    const healthFacts = [
+        "Смех улучшает иммунную систему.",
+        "Регулярные упражнения снижают риск сердечных заболеваний.",
+        "Питьевая вода улучшает концентрацию и продуктивность.",
+        "Сон важен для восстановления и роста клеток.",
+        "Здоровое питание улучшает настроение и энергию."
+    ];
+
+    // Функция для выбора случайного факта
+    function displayRandomHealthFact() {
+        const factElement = document.getElementById('healthFact');
+        const randomIndex = Math.floor(Math.random() * healthFacts.length);
+        factElement.textContent = healthFacts[randomIndex];
+    }
+
+    // Обновление факта при загрузке страницы
+    window.onload = displayRandomHealthFact;
+    document.addEventListener('scroll', function () {
+        const scrolled = window.pageYOffset;
+        document.body.style.backgroundPosition = `center ${scrolled * -0.2}px`;
+    });
+    window.onload = function () {
+        // Показать случайный факт о здоровье
+        displayRandomHealthFact();
+
+        // Плавное появление элементов
+        const fadeElements = document.querySelectorAll('.fade-in');
+        fadeElements.forEach(element => {
+            element.classList.add('visible');
+        });
+    };
+
+    document.addEventListener('scroll', function () {
+        const scrolled = window.pageYOffset;
+        document.body.style.backgroundPosition = `center ${scrolled * -0.2}px`;
+    });
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const registerModal = document.getElementById('registerModal');
+        const closeModal = document.querySelector('.close');
+        const registerForm = document.getElementById('registerForm');
+        const registerBtn = document.getElementById('registerBtn');
+        let currentRow = null;
+
+        // Открытие модального окна для регистрации нового пациента
+        registerBtn.addEventListener('click', function () {
+            currentRow = null; // Сброс текущей строки
+            registerForm.reset(); // Очистка формы
+            registerModal.style.display = 'block';
+        });
+
+        // Открытие модального окна для редактирования
+        document.querySelectorAll('.editBtn').forEach(button => {
+            button.addEventListener('click', function () {
+                currentRow = this.closest('tr');
+                const cells = currentRow.querySelectorAll('td');
+
+                // Заполнение формы данными из таблицы
+                document.getElementById('patientName').value = cells[2].textContent;
+                document.getElementById('patientAge').value = cells[3].textContent;
+                document.getElementById('patientGender').value = cells[4].textContent;
+
+                // Открытие модального окна
+                registerModal.style.display = 'block';
+            });
+        });
+
+        // Закрытие модального окна
+        closeModal.addEventListener('click', function () {
+            registerModal.style.display = 'none';
+        });
+
+        // Обработка отправки формы
+        registerForm.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const name = document.getElementById('patientName').value;
+            const age = document.getElementById('patientAge').value;
+            const gender = document.getElementById('patientGender').value;
+            const photoInput = document.getElementById('patientPhoto');
+            let photoSrc = '../static/images/default-avatar.png';
+
+            if (photoInput.files && photoInput.files[0]) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    photoSrc = e.target.result;
+                    updateTableRow(photoSrc, name, age, gender);
+                };
+                reader.readAsDataURL(photoInput.files[0]);
+            } else {
+                updateTableRow(photoSrc, name, age, gender);
+            }
+
+            // Закрытие модального окна
+            registerModal.style.display = 'none';
+        });
+
+        function updateTableRow(photoSrc, name, age, gender) {
+            if (currentRow) {
+                // Обновление существующей строки
+                const cells = currentRow.querySelectorAll('td');
+                cells[0].querySelector('img').src = photoSrc;
+                cells[2].textContent = name;
+                cells[3].textContent = age;
+                cells[4].textContent = gender;
+            } else {
+                // Добавление новой строки
+                const tableBody = document.getElementById('patientTableBody');
+                const newRow = document.createElement('tr');
+                newRow.innerHTML = `
+                <td><img src="${photoSrc}" alt="Фото пациента" class="patient-photo"></td>
+                <td>${tableBody.children.length + 1}</td>
+                <td>${name}</td>
+                <td>${age}</td>
+                <td>${gender}</td>
+                <td><button class="editBtn">Редактировать</button></td>
+            `;
+                tableBody.appendChild(newRow);
+
+                // Добавление обработчика для новой кнопки редактирования
+                newRow.querySelector('.editBtn').addEventListener('click', function () {
+                    currentRow = newRow;
+                    document.getElementById('patientName').value = name;
+                    document.getElementById('patientAge').value = age;
+                    document.getElementById('patientGender').value = gender;
+                    registerModal.style.display = 'block';
+                });
+            }
+        }
+    });
+</script>
 </body>
+</html>
