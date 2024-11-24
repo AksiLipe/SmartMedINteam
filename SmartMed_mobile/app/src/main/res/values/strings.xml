@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">SmartMed</string>
+    <string name="Enter_login">Введите логин</string>
+    <string name="Enter">Войти</string>
+    <string name="Enter_password">Введите пароль</string>
+    <string name="Doctor_appointment">Запись к врачу</string>
+    <string name="Recrption_time">Время приема:</string>
+    <string name="Subscribe">Записаться</string>
+    <string name="Sos">SOS</string>
+    <string name="Theme_of_question">Тема вопроса</string>
+    <string name="Question">Ваш вопрос</string>
+    <string name="Attach_files">Прикрепить файлы</string>
+    <string name="Send">Отправить</string>
+    <string name="Ask_doctor_question">Задать вопрос врачу</string>
+
+    <string name="enter_theme">Введите тему вопроса</string>
+    <string name="enter_question">Введите ваш вопрос</string>
+    <string name="question_sent">Вопрос успешно отправлен</string>
+
+    <string name="theme_too_short">Тема должна содержать минимум 10 символов</string>
+    <string name="question_too_short">Вопрос должен содержать минимум 10 символов</string>
+
+    <string name="too_many_newlines">Слишком много пустых строк</string>
+</resources>
