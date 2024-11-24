@@ -26,7 +26,6 @@ body {
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     justify-content: space-between;
-    max-height: 800px;
 }
 
 .sidebar-links {
@@ -49,6 +48,19 @@ body {
     transition: background-color 0.3s, color 0.3s;
     text-align: center;
     width: 80%;
+    box-sizing: border-box; /* Добавлено для учета границ */
+}
+
+.alert-box {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #f44336;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
 }
 
 .nav-btn:hover {
@@ -97,7 +109,7 @@ body {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-height: 90vh;
-    overflow-y: auto; /* Добавьте прокрутку для контента */
+    overflow-y: auto;
 }
 
 h1 {
@@ -105,11 +117,11 @@ h1 {
 }
 
 .faq-section {
-    height: 800px; /* Установите фиксированную высоту для контейнера FAQ */
-    overflow-y: auto; /* Добавьте вертикальную прокрутку */
-    overflow-x: hidden; /* Скрыть горизонтальную прокрутку, если она не нужна */
+    height: 800px;
+    overflow-y: auto;
+    overflow-x: hidden;
     margin-top: 20px;
-    padding-right: 10px; /* Добавьте отступ для прокрутки */
+    padding-right: 10px;
 }
 
 .faq-item {
@@ -178,23 +190,23 @@ h1 {
 }
 
 .modal-content {
-    background: linear-gradient(to bottom, #ffffff, #e3f2fd);
-    margin: 10% auto;
-    padding: 20px;
+    background: linear-gradient(to bottom right, #ffffff, #e3f2fd);
+    margin: 5% auto;
+    padding: 30px;
     border: none;
-    width: 60%;
-    max-width: 500px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    width: 70%;
+    max-width: 600px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     position: relative;
 }
 
 .close {
     color: #333;
     position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 24px;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
     font-weight: bold;
     cursor: pointer;
 }
@@ -205,32 +217,40 @@ h1 {
     text-decoration: none;
 }
 
-.modal-content h2 {
-    color: #42a5f5;
-    margin-bottom: 20px;
-}
-
-.modal-content textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-}
-
-.modal-content button[type="submit"] {
+.btn-submit {
     background-color: #42a5f5;
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 12px 25px;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 8px;
     width: 100%;
+    margin-top: 15px;
+    font-size: 16px;
+    transition: background-color 0.3s;
 }
 
-.modal-content button[type="submit"]:hover {
+.btn-submit:hover {
     background-color: #1e88e5;
+}
+
+input[type="time"],
+input[type="text"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+input[type="time"]:focus,
+input[type="text"]:focus {
+    border-color: #42a5f5;
+    outline: none;
 }
 
 .footer {
@@ -280,6 +300,22 @@ h1 {
     display: flex;
     gap: 10px;
     margin-bottom: 20px;
+}
+
+.delete-slot-btn {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s;
+}
+
+.delete-slot-btn:hover {
+    background-color: #d32f2f;
 }
 
 .sort-btn {

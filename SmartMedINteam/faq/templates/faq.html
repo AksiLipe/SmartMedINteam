@@ -17,6 +17,7 @@
     <div class="sidebar-links">
         <a href="{% url 'table' %}" class="nav-btn">Таблица</a>
         <a href="{% url 'faq' %}" class="nav-btn">FAQ</a>
+        <button class="nav-btn" id="slotsBtn">Слоты</button> <!-- Новая кнопка -->
     </div>
     <a href="{% url 'login' %}" class="nav-btn logout-btn">Выйти</a>
 </div>
@@ -30,19 +31,9 @@
             <button id="sortOldestBtn" class="sort-btn">Сортировать по старшинству</button>
         </div>
         <div class="faq-section">
+            <!-- Пример вопросов -->
             <div class="faq-item" data-timestamp="2023-10-01T10:00:00">
-                <h3 class="topic">Тема вопроса</h3>
-                <p class="question">Как записаться на приём?</p>
-                <div class="faq-footer">
-                    <span class="timestamp">22 июня 2022, 10:00</span>
-                    <button class="answer-btn">Ответить</button>
-                </div>
-                <div class="answer">
-                    <span class="edit-icon" style="display: none;"><i class="fas fa-edit"></i></span>
-                </div>
-            </div>
-            <div class="faq-item" data-timestamp="2023-10-01T10:00:00">
-                <h3 class="topic">Тема вопроса</h3>
+                <h3 class="topic">Приём</h3>
                 <p class="question">Как записаться на приём?</p>
                 <div class="faq-footer">
                     <span class="timestamp">1 октября 2023, 10:00</span>
@@ -53,10 +44,10 @@
                 </div>
             </div>
             <div class="faq-item" data-timestamp="2023-10-01T10:00:00">
-                <h3 class="topic">Тема вопроса</h3>
-                <p class="question">Как записаться на приём?</p>
+                <h3 class="topic">Активированный уголь?</h3>
+                <p class="question">Что такое активированный уголь?</p>
                 <div class="faq-footer">
-                    <span class="timestamp">1 октября 2023, 10:00</span>
+                    <span class="timestamp">29 октября 2024, 12:00</span>
                     <button class="answer-btn">Ответить</button>
                 </div>
                 <div class="answer">
@@ -64,10 +55,10 @@
                 </div>
             </div>
             <div class="faq-item" data-timestamp="2023-10-01T10:00:00">
-                <h3 class="topic">Тема вопроса</h3>
-                <p class="question">Как записаться на приём?</p>
+                <h3 class="topic">Долгие очереди</h3>
+                <p class="question">Почему больницы принимают очереди очень долго?</p>
                 <div class="faq-footer">
-                    <span class="timestamp">1 октября 2023, 10:00</span>
+                    <span class="timestamp">20 ноября 2024, 18:00</span>
                     <button class="answer-btn">Ответить</button>
                 </div>
                 <div class="answer">
@@ -75,109 +66,10 @@
                 </div>
             </div>
             <div class="faq-item" data-timestamp="2023-10-01T10:00:00">
-                <h3 class="topic">Тема вопроса</h3>
-                <p class="question">Как записаться на приём?</p>
+                <h3 class="topic">Гараж</h3>
+                <p class="question">Куплю гараж, недорого в Советском районе.</p>
                 <div class="faq-footer">
-                    <span class="timestamp">1 октября 2023, 10:00</span>
-                    <button class="answer-btn">Ответить</button>
-                </div>
-                <div class="answer">
-                    <span class="edit-icon" style="display: none;"><i class="fas fa-edit"></i></span>
-                </div>
-            </div>
-            <div class="faq-item" data-timestamp="2023-10-01T10:00:00">
-                <h3 class="topic">Тема вопроса</h3>
-                <p class="question">Как записаться на приём?</p>
-                <div class="faq-footer">
-                    <span class="timestamp">1 октября 2023, 10:00</span>
-                    <button class="answer-btn">Ответить</button>
-                </div>
-                <div class="answer">
-                    <span class="edit-icon" style="display: none;"><i class="fas fa-edit"></i></span>
-                </div>
-            </div>
-            <div class="faq-item" data-timestamp="2023-10-01T10:00:00">
-                <h3 class="topic">Тема вопроса</h3>
-                <p class="question">Как записаться на приём?</p>
-                <div class="faq-footer">
-                    <span class="timestamp">1 октября 2023, 10:00</span>
-                    <button class="answer-btn">Ответить</button>
-                </div>
-                <div class="answer">
-                    <span class="edit-icon" style="display: none;"><i class="fas fa-edit"></i></span>
-                </div>
-            </div>
-            <div class="faq-item" data-timestamp="2023-10-01T10:00:00">
-                <h3 class="topic">Тема вопроса</h3>
-                <p class="question">Как записаться на приём?</p>
-                <div class="faq-footer">
-                    <span class="timestamp">1 октября 2023, 10:00</span>
-                    <button class="answer-btn">Ответить</button>
-                </div>
-                <div class="answer">
-                    <span class="edit-icon" style="display: none;"><i class="fas fa-edit"></i></span>
-                </div>
-            </div>
-            <div class="faq-item" data-timestamp="2023-10-01T10:00:00">
-                <h3 class="topic">Тема вопроса</h3>
-                <p class="question">Как записаться на приём?</p>
-                <div class="faq-footer">
-                    <span class="timestamp">1 октября 2023, 10:00</span>
-                    <button class="answer-btn">Ответить</button>
-                </div>
-                <div class="answer">
-                    <span class="edit-icon" style="display: none;"><i class="fas fa-edit"></i></span>
-                </div>
-            </div>
-            <div class="faq-item" data-timestamp="2023-10-01T10:00:00">
-                <h3 class="topic">Тема вопроса</h3>
-                <p class="question">Как записаться на приём?</p>
-                <div class="faq-footer">
-                    <span class="timestamp">1 октября 2023, 10:00</span>
-                    <button class="answer-btn">Ответить</button>
-                </div>
-                <div class="answer">
-                    <span class="edit-icon" style="display: none;"><i class="fas fa-edit"></i></span>
-                </div>
-            </div>
-            <div class="faq-item" data-timestamp="2023-10-01T10:00:00">
-                <h3 class="topic">Тема вопроса</h3>
-                <p class="question">Как записаться на приём?</p>
-                <div class="faq-footer">
-                    <span class="timestamp">1 октября 2023, 10:00</span>
-                    <button class="answer-btn">Ответить</button>
-                </div>
-                <div class="answer">
-                    <span class="edit-icon" style="display: none;"><i class="fas fa-edit"></i></span>
-                </div>
-            </div>
-            <div class="faq-item" data-timestamp="2023-10-01T10:00:00">
-                <h3 class="topic">Тема вопроса</h3>
-                <p class="question">Как записаться на приём?</p>
-                <div class="faq-footer">
-                    <span class="timestamp">1 октября 2023, 10:00</span>
-                    <button class="answer-btn">Ответить</button>
-                </div>
-                <div class="answer">
-                    <span class="edit-icon" style="display: none;"><i class="fas fa-edit"></i></span>
-                </div>
-            </div>
-            <div class="faq-item" data-timestamp="2023-10-01T10:00:00">
-                <h3 class="topic">Тема вопроса</h3>
-                <p class="question">Как записаться на приём?</p>
-                <div class="faq-footer">
-                    <span class="timestamp">1 октября 2023, 10:00</span>
-                    <button class="answer-btn">Ответить</button>
-                </div>
-                <div class="answer">
-                    <span class="edit-icon" style="display: none;"><i class="fas fa-edit"></i></span>
-                </div>
-            </div>
-            <div class="faq-item" data-timestamp="2023-10-01T10:00:00">
-                <h3 class="topic">Тема вопроса</h3>
-                <p class="question">Как записаться на приём?</p>
-                <div class="faq-footer">
-                    <span class="timestamp">1 октября 2023, 10:00</span>
+                    <span class="timestamp">22 ноября 2024, 06:45</span>
                     <button class="answer-btn">Ответить</button>
                 </div>
                 <div class="answer">
@@ -196,6 +88,37 @@
         <form id="answerForm">
             <textarea id="answerText" rows="4" placeholder="Введите ваш ответ здесь..." required></textarea>
             <button type="submit" id="submitBtn">Отправить</button>
+        </form>
+    </div>
+</div>
+
+<!-- Модальное окно для управления слотами -->
+<div id="slotsModal" class="modal fade-in">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Управление слотами</h2>
+        <div class="slots-list">
+            <p>Список существующих слотов:</p>
+            <ul id="slotsList">
+                <!-- Пример слотов -->
+                <li>Слот 1: 10:00 - 11:00, Врач: Терапевт, Иванов И.И.
+                    <button class="delete-slot-btn">Удалить</button>
+                </li>
+                <li>Слот 2: 11:00 - 12:00, Врач: Хирург, Петров П.П.
+                    <button class="delete-slot-btn">Удалить</button>
+                </li>
+            </ul>
+        </div>
+        <form id="addSlotForm">
+            <label for="slotStart">Начало слота:</label>
+            <input type="time" id="slotStart" required>
+            <label for="slotEnd">Конец слота:</label>
+            <input type="time" id="slotEnd" required>
+            <label for="doctorType">Что за врач:</label>
+            <input type="text" id="doctorType" placeholder="Например, Терапевт" required>
+            <label for="doctorName">ФИО врача:</label>
+            <input type="text" id="doctorName" placeholder="Например, Иванов И.И." required>
+            <button type="submit" class="btn-submit">Добавить слот</button>
         </form>
     </div>
 </div>
@@ -226,21 +149,6 @@
     }
 
     // Обновление факта при загрузке страницы
-    window.onload = displayRandomHealthFact;
-    document.addEventListener('scroll', function () {
-        const scrolled = window.pageYOffset;
-        document.body.style.backgroundPosition = `center ${scrolled * -0.2}px`;
-    });
-    window.onload = function () {
-        // Показать случайный факт о здоровье
-        displayRandomHealthFact();
-
-        // Плавное появление элементов
-        const fadeElements = document.querySelectorAll('.fade-in');
-        fadeElements.forEach(element => {
-            element.classList.add('visible');
-        });
-    };
     window.onload = function () {
         displayRandomHealthFact();
 
@@ -262,8 +170,10 @@
             });
         });
 
-        document.querySelector('.close').addEventListener('click', function () {
-            answerModal.style.display = 'none';
+        document.querySelectorAll('.close').forEach(closeBtn => {
+            closeBtn.addEventListener('click', function () {
+                closeBtn.closest('.modal').style.display = 'none';
+            });
         });
 
         answerForm.addEventListener('submit', function (event) {
@@ -308,6 +218,52 @@
                     : new Date(a.dataset.timestamp) - new Date(b.dataset.timestamp);
             });
             faqItems.forEach(item => faqSection.appendChild(item));
+        }
+
+        // Управление слотами
+        const slotsModal = document.getElementById('slotsModal');
+        const slotsBtn = document.getElementById('slotsBtn');
+        const addSlotForm = document.getElementById('addSlotForm');
+        const slotsList = document.getElementById('slotsList');
+
+// Открытие модального окна для слотов
+        slotsBtn.addEventListener('click', function () {
+            slotsModal.style.display = 'block';
+        });
+// ... существующий код ...
+
+// Обработка добавления нового слота
+        addSlotForm.addEventListener('submit', function (event) {
+            event.preventDefault();
+            const slotStart = document.getElementById('slotStart').value;
+            const slotEnd = document.getElementById('slotEnd').value;
+            const doctorType = document.getElementById('doctorType').value;
+            const doctorName = document.getElementById('doctorName').value;
+            const slotNumber = slotsList.children.length + 1;
+            const newSlot = document.createElement('li');
+            newSlot.innerHTML = `Слот ${slotNumber}: ${slotStart} - ${slotEnd}, Врач: ${doctorType}, ${doctorName} <button class="delete-slot-btn">Удалить</button>`;
+            slotsList.appendChild(newSlot);
+            document.getElementById('slotStart').value = ''; // Очистка поля ввода
+            document.getElementById('slotEnd').value = ''; // Очистка поля ввода
+            document.getElementById('doctorType').value = ''; // Очистка поля ввода
+            document.getElementById('doctorName').value = ''; // Очистка поля ввода
+        });
+
+// Обработка удаления слота
+        slotsList.addEventListener('click', function (event) {
+            if (event.target.classList.contains('delete-slot-btn')) {
+                event.target.parentElement.remove();
+                updateSlotNumbers();
+            }
+        });
+
+// Функция для обновления номеров слотов
+        function updateSlotNumbers() {
+            const slots = slotsList.children;
+            for (let i = 0; i < slots.length; i++) {
+                const slotText = slots[i].innerHTML.split(': ')[1];
+                slots[i].innerHTML = `Слот ${i + 1}: ${slotText}`;
+            }
         }
     };
 </script>

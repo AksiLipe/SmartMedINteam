@@ -349,3 +349,15 @@ tbody tr:hover {
     margin-top: auto; /* Перемещает кнопку вниз */
     margin-bottom: 40px;
 }
+
+.alert-box {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #f3ff49;
+    color: #2c2c2c;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
