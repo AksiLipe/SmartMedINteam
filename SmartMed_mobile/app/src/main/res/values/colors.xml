@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="blue">#60A0EA</color>
+    <color name="divider_color">#9F99C2F0</color>
+
+    <color name="background">#F5F5F5</color>
+    <color name="text_primary">#212121</color>
+    <color name="divider">#E0E0E0</color>
+    <color name="heart_red">#E53935</color>
+    <color name="pressure_blue">#1E88E5</color>
+    <color name="oxygen_green">#43A047</color>
+    <color name="breathing_purple">#8E24AA</color>
+    <color name="danger_background">#33FF0000</color>
+</resources>
